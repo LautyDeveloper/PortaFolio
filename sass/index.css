@@ -332,7 +332,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 6px solid black;
+  background-image: url("../Nueva carpeta/descarga (1).jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  width: 100%;
+  height: 270px;
 }
 .proyectos_card h5 {
   color: #FF6666;
@@ -365,15 +372,37 @@ body {
   transition: all 0.2 ease-in;
   opacity: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
-  background-color: black;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.proyectos_card:hover img {
-  opacity: 0.2;
+.proyectos_card .overlay p {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.proyectos_card .overlay_iconos {
+  width: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.proyectos_card .overlay_iconos a {
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
+}
+.proyectos_card .overlay_iconos a i {
+  font-size: 1.7rem;
+}
+.proyectos_card .overlay_iconos a:hover {
+  color: #FF6666;
+}
+.proyectos_card:hover .proyectos_card_arriba {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.8771883754) 0%, rgba(0, 0, 0, 0.6278886555) 100%), url("../Nueva carpeta/descarga (1).jpeg");
 }
 .proyectos_card:hover .overlay {
   opacity: 1;

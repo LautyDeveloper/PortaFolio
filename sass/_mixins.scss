@@ -15,3 +15,10 @@
 @mixin crear-Borde($medida, $estado, $color){
      border: $medida $estado $color;
 }
+
+@mixin imagen-de-fondo($url){
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

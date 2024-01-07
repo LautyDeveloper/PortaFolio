@@ -300,10 +300,13 @@ $color-blanco: #fff;
         @include mixins.crear-Borde(3px, solid, $color-rojo-bitter);
         background-color: $color-rojo-mas-oscuro;
         position: relative;
-
         &_arriba{
             @include mixins.crear-flex(column,center,center);
-            border: 6px solid black;
+            @include mixins.imagen-de-fondo("../Nueva carpeta/descarga (1).jpeg");
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+            width: 100%;
+            height: 270px;
         }
         
         h5{
@@ -332,18 +335,39 @@ $color-blanco: #fff;
             transition: all 0.2 ease-in;
             opacity: 0;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             text-align: center;
-            background-color: black;
             text-align: center;
+            @include mixins.crear-flex(column, center, center);
+            p{
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            &_iconos{
+                width: 80px;
+                @include mixins.crear-flex(row, space-between, center);
+                a{
+                    text-decoration: none;
+                    color: white;
+                    transition: .4s;
+                    i{
+                        font-size: 1.7rem;
+                    }
+
+                }       
+                a:hover{
+                    color: #FF6666;
+                }
+            }
         }
         
     }
 
-    &_card:hover img{
-        opacity: 0.2;
+    &_card:hover .proyectos_card_arriba{
+        background-image: radial-gradient(
+            circle, 
+            rgba(0,0,0,0.87718837535014) 0%, 
+            rgba(0,0,0,0.6278886554621849) 100%
+        ),url("../Nueva carpeta/descarga (1).jpeg");
     }
 
     &_card:hover .overlay{
