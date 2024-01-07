@@ -1,0 +1,17 @@
+@mixin crear-flex($column,$justify, $align){
+    display: flex;
+    flex-direction: $column;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin linearGradient($color1, $color2,$url){
+    background-image: linear-gradient(
+        $color1,
+        $color2
+    ),url($url)
+}
+
+@mixin crear-Borde($medida, $estado, $color){
+     border: $medida $estado $color;
+}

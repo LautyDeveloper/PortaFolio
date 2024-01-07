@@ -1,0 +1,529 @@
+@use 'mixins';
+@use 'normalize';
+
+$color-rojo-oscuro: #6B0000;
+$color-rojo-mas-oscuro: #3b0000;
+$color-rojo-claro: #B30000;
+$color-rojo-vermilion: #ff0000;
+$color-rojo-bitter: #FF6666;
+$color-blanco: #fff;
+
+
+.navbar {
+    padding: 10px 20px 10px 20px;
+    background-color: transparent;
+    @include mixins.crear-flex(row, space-between, center);
+
+    width:100vw;
+    z-index: 10000;
+    position: fixed;
+    transition: .3s ease-in;
+    backdrop-filter: blur(100px);
+
+    &-collapse{
+        background-color: transparent;
+        width: 100vw;
+    }
+
+    &-brand{
+        color: $color-rojo-vermilion;
+        font-weight: 900;
+        letter-spacing: 4px;
+    }
+
+    &-brand:hover{
+        color: $color-rojo-claro;
+    }
+
+    .nav-item .nav-link {
+        color: $color-blanco;
+        transition: all 0.3s ease-in;
+    }
+    
+    .nav-item .nav-link:hover {
+        color: $color-rojo-claro;
+    }
+    
+    &-collapse {
+        @include mixins.crear-flex(row, space-between, center);
+    }
+}
+
+/* Hero */
+.hero {
+    @include mixins.crear-flex(row, space-between, center);
+    height: 92vh;
+    background-color: $color-rojo-mas-oscuro;
+
+    &_titulo h1 {
+        color: $color-blanco;
+        font-size: 3.8rem;
+    }
+
+    &_titulo &_textoanimado {
+        position: relative;
+    }
+
+    &_titulo &_textoanimado h3 {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: transparent;
+        -webkit-text-stroke: 2.5px $color-rojo-vermilion;
+        background-image: linear-gradient($color-rojo-vermilion,$color-rojo-vermilion);
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        background-position: -45rem 0;
+        animation: homeBgText 6s linear infinite;
+        animation-delay: 2s;
+    }
+
+    &_titulo &_textoanimado h3::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        animation: homeCursorText 6s linear infinite;
+        animation-delay: 2s;
+    }
+
+    &_parrafo {
+        width: 60%;
+        color: $color-blanco;
+        font-size: 1.4rem;
+    }
+
+    &_todo {
+        height: 80%;
+        width: 60%;
+        margin-left: 2%;
+        @include mixins.crear-flex(column, space-evenly, flex-start);
+        margin-left: 2%;
+    }
+
+    &_abajo{
+        width: 45%;
+        height: auto;
+        @include mixins.crear-flex(column, space-between, center);
+    }
+
+    &_botones{
+        width: 100%;
+        height: 5rem;
+        position: relative;
+        @include mixins.crear-flex(row, space-between, center);
+    }
+    &_botones button{
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 70%;
+        background-color: $color-rojo-vermilion;
+        border: .2rem solid $color-rojo-vermilion;
+        border-radius: .8rem;
+        font-size: 1.4rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        color: $color-rojo-mas-oscuro;
+        z-index: 1;
+        overflow: hidden;
+        transition: .5s;
+    }
+
+    &_botones button::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: $color-rojo-mas-oscuro;
+        z-index: -1;
+        transition: .5s;
+    }
+
+    &_botones button:hover::before{
+        width: 100%;
+    }
+
+    
+    &_botones button:hover{
+        color: $color-blanco;
+    }
+
+    &_botones .cv{
+        background-color: $color-rojo-mas-oscuro;
+        color: white;
+    }
+
+    &_botones .cv::before{
+        background-color: $color-rojo-vermilion;
+    }
+
+    &_botones .cv:hover{
+        color: $color-rojo-mas-oscuro;
+    
+    }
+
+    &_redes{
+        width: 55%;
+        margin-top: 40px;
+        @include mixins.crear-flex(row,space-between,center);
+
+        i{
+            font-size: 1.2rem;
+            color: $color-rojo-mas-oscuro;
+            background-color:$color-rojo-vermilion;
+            padding: 5px 11px;
+            border-radius: 50%;
+            border: 2px solid $color-rojo-vermilion;
+            transition: all .5s ease;
+            cursor: pointer;
+        }
+        i:hover{
+            background-color: transparent;
+            color: $color-blanco;
+    }
+    }
+
+    
+    &_imagen{
+        position: relative;
+        width: 30%;
+        height: 70%;
+        margin-right: 6%;
+        border-radius: 50%;
+        @include mixins.crear-flex(row, center, center);
+
+        img{
+                    width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        border: .2rem solid $color-rojo-claro;
+        }
+
+        &_spin{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%) rotate(0);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border-top: .2rem solid $color-rojo-claro;
+            border-bottom: .2rem solid $color-rojo-claro;
+            border-left: .2rem solid transparent;
+            border-right: .2rem solid transparent;
+            animation: heroSpinner 6s linear infinite;
+        }
+    }
+}
+
+/* Sobre Mi  */
+.sobremi{
+    background: rgb(59,0,0);
+    background: linear-gradient(180deg, rgba(59,0,0,1) 0%, rgba(107,0,0,1) 100%);
+    @include mixins.crear-flex(column,center,center);
+    color: $color-blanco;
+
+    &_arriba{
+        @include mixins.crear-flex(column,center,center);
+        p{
+            width: 85%;
+        }
+    }
+
+    &_abajo{
+        width: 85%;
+        @include mixins.crear-flex(row, space-between, flex-start);
+
+        &_personal{
+            width: 30%;
+            @include mixins.crear-flex(column,center,center);
+            &_container{
+            @include mixins.crear-flex(row, space-between, center);
+            width: 100%;
+            height: 100%;
+            }
+        }
+
+        &_intereses{
+            width: 40%;
+            @include mixins.crear-flex(column, center,center);
+            &_container{
+                width: 100%;
+                
+                @include mixins.crear-flex(row, space-evenly, center);
+                flex-wrap: wrap;    
+            }
+            &_cuadrado{
+                min-width: 13%;
+                margin: 4%;
+                height: 69px;
+                @include mixins.crear-flex(column, center, center);
+                box-shadow: 0px 5px 10px rgba(80, 80, 80, 0.568);
+                @include mixins.crear-Borde(1px, solid, $color-rojo-bitter);
+                padding-top: 2px;
+                background-color: $color-rojo-mas-oscuro;
+                i{
+                    font-size: 24px;
+                }
+                p{
+                    color: $color-rojo-bitter;
+                }
+            }
+        }
+    }
+}
+
+/* Proyectos  */
+.proyectos{
+    width: 100vw;
+    background: rgb(107,0,0);
+    background: linear-gradient(180deg, rgba(107,0,0,1) 0%, rgba(106,0,0,1) 65%, rgba(59,0,0,1) 100%);
+    @include mixins.crear-flex(column, center, center);
+    h2{
+        color: $color-blanco;
+        border-bottom: 3px solid $color-rojo-bitter;
+        margin: 40px 0px 20px 0px;
+    }
+    &_contenedor{
+        width: 85%;
+        flex-wrap: wrap;
+    }
+
+    &_card{
+        border-radius: 40px;
+        @include mixins.crear-Borde(3px, solid, $color-rojo-bitter);
+        background-color: $color-rojo-mas-oscuro;
+        position: relative;
+
+        &_arriba{
+            @include mixins.crear-flex(column,center,center);
+            border: 6px solid black;
+        }
+        
+        h5{
+            color: $color-rojo-bitter;
+        }
+        p{
+            color: $color-blanco;
+        }
+        .card-footer{
+            border-top: 1px solid $color-rojo-bitter;
+            @include mixins.crear-flex(column, center, center);
+            .contenedor-badges{
+                width: 85%;
+                @include mixins.crear-flex(row, space-around, center);
+                .badge{
+                    background-color:$color-rojo-claro;
+                }
+            }
+        }
+
+        img{
+            border-top-right-radius: 40px;
+            border-top-left-radius: 40px;
+        }
+        .overlay{
+            transition: all 0.2 ease-in;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background-color: black;
+            text-align: center;
+        }
+        
+    }
+
+    &_card:hover img{
+        opacity: 0.2;
+    }
+
+    &_card:hover .overlay{
+        opacity: 1;
+    }
+    
+}
+
+/* Habilidades */
+.habilidades{
+    @include mixins.crear-flex(column,center,center);
+    background-color: $color-rojo-mas-oscuro;
+    padding-top: 60px;
+    color: white;
+    h5{
+        margin-bottom: 20px;
+    }
+    &_container{
+        width: 85%;
+        @include mixins.crear-flex(row, center, center);
+        flex-wrap: wrap;
+        &_texto{
+            @include mixins.crear-flex(column, space-between, flex-start);
+            height: 55px;
+            h5{
+                color: white;
+                margin: 0;
+            }
+            p{
+                color: $color-rojo-bitter;
+                margin: 0;
+
+            }
+        }
+        &_hab{
+            background-color: $color-rojo-mas-oscuro;
+            width: 27%;
+            @include mixins.crear-flex(row, flex-start, center);
+            margin:  3px;
+            @include mixins.crear-Borde(2px, solid, $color-rojo-oscuro);
+            
+            .imagen{
+                width: 20%;
+                height: 100%;
+                background-color: black;
+            }
+        }
+        
+        &_hab:hover{
+            transform: scale(1.02);
+            }
+        &_hab:not(:hover){
+            transform: scale(0.97);
+        }
+        }
+        
+    }
+
+/* Contacto */
+.contacto{
+    background-color: $color-rojo-mas-oscuro;
+    @include mixins.crear-flex(column, center, center);
+
+    &_contenedor{
+        @include mixins.crear-flex(row, space-between, center)
+    }
+}
+
+
+/* Responsive */
+@media screen and (max-width:767px){
+    .hero{
+        @include mixins.crear-flex(column-reverse, center, center);
+        height: auto;
+        text-align: center;
+        &_todo {
+            width: 100%;
+            margin: 0;
+            @include mixins.crear-flex(column, center, center);
+
+        }
+
+        &_imagen{
+            width: 200px;
+            height: 200px;
+            margin: 0;
+        }
+
+        &_abajo{
+            width: 90%;
+        }
+    }
+}
+
+/*Animaciones*/
+
+@keyframes homeBgText{
+    0%{
+        background-position: -45rem 0;
+    }
+
+    10%{
+        background-position: -45rem 0;
+
+    }
+
+    100%{
+        background-position: -45rem 0;
+        
+    }
+
+    65%{
+        background-position: 0 0;
+    }
+
+    85%{
+        background-position: 0 0;
+    }
+}
+
+@keyframes homeCursorText{
+    0%{
+        width: 0;
+    }
+
+    10%{
+        width: 0;
+
+    }
+
+    100%{
+        width: 0;
+        
+    }
+
+    65%{
+        width: 86%;
+        opacity: 1;
+    }
+
+
+    85%{
+        width: 86%;
+        opacity: 1;
+    }
+
+    // 0%{
+    //     width: 0;
+
+    // }
+    // 10%{
+    //    width: 0;
+
+    // }
+    // 100%{
+    //    width: 0;
+    // }
+    // 65%{
+    //     width: 86%;
+    //     opacity: 1;
+    // }
+    // 78%{
+    //     width: 86%;
+    //     opacity: 1;
+    // }
+    // 85%{
+    //     width: 86%;
+    //     opacity: 1;
+    // }
+
+    // 75%{
+    //     opacity: 0;
+    // }
+    // 81%{
+    //     opacity: 0;
+    // }
+}
+
+@keyframes heroSpinner {
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}

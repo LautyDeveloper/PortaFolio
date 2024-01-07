@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8" />
+    <meta name="author" content="Lautaro Aquino" />
+    <meta
+      name="description"
+      content="PortFolio de Lautaro Aquino, desarrollador web"
+    />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, React, Bootstrap, JS, Desarrollo, Web, Portafolio"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Utilizacion de Animaciones -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Link al CSS -->
+    <link rel="stylesheet" href="sass/index.css" />
+    <title>Lautaro Aquino | Desarrollador Web Full-Stack</title>
+  </head>
+  <body>
+    <!-- Barra de Navegacion -->
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbar-toggler"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+          <h1 class="navbar-brand" href="#">this.Lauty</h1>
+          <ul
+            class="navbar-nav d-flex justify-content-center align-items-center"
+          >
+            <li class="nav-item">
+              <a class="nav-link" href="#hero">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#proyectos">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobremi">Sobre Mi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-disabled="true" href="#">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-disabled="true" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seccion Hero -->
+    <section class="hero" id="hero">
+      <div class="hero_todo">
+        <div class="hero_titulo">
+          <h1>Hola, Soy Lautaro Aquino</h1>
+          <div class="hero_textoanimado">
+            <h3>Desarrollador Web</h3>
+          </div>
+        </div>
+        <p class="hero_parrafo">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+          eaque neque esse perferendis repellendus ipsam unde corporis sed quos
+          molestias.
+        </p>
+        <div class="hero_abajo">
+          <div class="hero_botones">
+            <button class="hablemos">¡Hablemos!</button>
+            <button class="cv">Descargar CV</button>
+          </div>
+          <div class="hero_redes">
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-linkedin"></i>
+            <i class="bi bi-github"></i>
+            <i class="bi bi-twitter"></i>
+          </div>
+        </div>
+      </div>
+      <div class="hero_imagen">
+        <img src="Nueva carpeta/descarga (1).jpeg" alt="" />
+        <span class="hero_imagen_spin"></span>
+      </div>
+    </section>
+
+    <!-- Seccion Sobre Mi -->
+    <section class="sobremi">
+      <div class="sobremi_arriba">
+        <h2>Sobre Mi</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          aliquam, reiciendis quod cumque dignissimos aperiam necessitatibus
+          dolore beatae assumenda! Accusamus nesciunt nulla modi, nam repellat
+          blanditiis tempora autem aliquid totam adipisci aperiam sed, corrupti
+          cumque! Iure id voluptate eaque quod accusantium dolore aliquid
+          assumenda quaerat. Possimus incidunt quidem quisquam quibusdam.
+        </p>
+      </div>
+      <div class="sobremi_abajo">
+        <div class="sobremi_abajo_personal">
+          <h4>Datos Personales</h4>
+          <div class="sobremi_abajo_personal_container">
+            <div class="sobremi_abajo_personal_izquierda">
+              <p class="color-acento">Nombre:</p>
+              <p class="color-acento">Edad:</p>
+              <p class="color-acento">Nacimiento</p>
+              <p class="color-acento">Telefono:</p>
+              <p class="color-acento">Correo:</p>
+              <p class="color-acento">Hogar:</p>
+            </div>
+            <div class="sobremi_abajo_personal_derecha">
+              <p>Lautaro Fabio Aquino</p>
+              <p>18</p>
+              <p>24-11-2005</p>
+              <p>11-5114-3826</p>
+              <p>@laufabio24@gmail.com</p>
+              <p>Buenos Aires, Argentina</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sobremi_abajo_intereses">
+          <h4>Intereses Personales</h4>
+          <div class="sobremi_abajo_intereses_container">
+            <div
+              class="sobremi_abajo_intereses_cuadrado animate__animated animate__bounce animate__delay-2s"
+            >
+              <i class="bi bi-controller"></i>
+              <p>Juegos</p>
+            </div>
+            <div class="sobremi_abajo_intereses_cuadrado">
+              <i class="bi bi-car-front"></i>
+              <p>Autos</p>
+            </div>
+            <div class="sobremi_abajo_intereses_cuadrado">
+              <i class="bi bi-cpu"></i>
+              <p>Robotica</p>
+            </div>
+            <div class="sobremi_abajo_intereses_cuadrado">
+              <i class="bi bi-robot"></i>
+              <p>IA</p>
+            </div>
+            <div class="sobremi_abajo_intereses_cuadrado">
+              <img src="futbol-americano (1).png" alt="" />
+              <p>Futbol</p>
+            </div>
+            <div class="sobremi_abajo_intereses_cuadrado">
+              <i class="bi bi-music-note"></i>
+              <p>Musica</p>
+            </div>
+            <div class="sobremi_abajo_intereses_cuadrado">
+              <i class="bi bi-cash-coin"></i>
+              <p>Dinero</p>
+            </div>
+            <div class="sobremi_abajo_intereses_cuadrado">
+              <img src="peso (3).png" alt="" />
+              <p>GYM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion Proyectos -->
+    <section class="proyectos" id="proyectos">
+      <h2>Proyectos</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4 proyectos_contenedor">
+        <div class="col">
+          <div class="card h-100 proyectos_card">
+            <div class="card_arriba">
+              <img
+                src="Nueva carpeta/descarga (1).jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="overlay">
+                <p>Proyecto 1</p>
+                <div class="overlay_iconos">
+                  <a href=""><i class="bi bi-github"></i></a>
+                  <a href=""><i class="bi bi-github"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="contenedor-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JAVASCRIPT</span>
+                <span class="badge">BOOTSTRAP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 proyectos_card">
+            <img
+              src="Nueva carpeta/descarga (1).jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This card has supporting text below as a natural lead-in to
+                additional content.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="contenedor-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JAVASCRIPT</span>
+                <span class="badge">BOOTSTRAP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 proyectos_card">
+            <img
+              src="Nueva carpeta/descarga (1).jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This card has even longer content
+                than the first to show that equal height action.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="contenedor-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JAVASCRIPT</span>
+                <span class="badge">BOOTSTRAP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 proyectos_card">
+            <img
+              src="Nueva carpeta/descarga (1).jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This card has even longer content
+                than the first to show that equal height action.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="contenedor-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JAVASCRIPT</span>
+                <span class="badge">BOOTSTRAP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 proyectos_card">
+            <img
+              src="Nueva carpeta/descarga (1).jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This card has even longer content
+                than the first to show that equal height action.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="contenedor-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JAVASCRIPT</span>
+                <span class="badge">BOOTSTRAP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 proyectos_card">
+            <img
+              src="Nueva carpeta/descarga (1).jpeg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                This is a wider card with supporting text below as a natural
+                lead-in to additional content. This card has even longer content
+                than the first to show that equal height action.
+              </p>
+            </div>
+            <div class="card-footer">
+              <div class="contenedor-badges">
+                <span class="badge">HTML</span>
+                <span class="badge">CSS</span>
+                <span class="badge">JAVASCRIPT</span>
+                <span class="badge">BOOTSTRAP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seccion Habilidades -->
+    <div id="habilidades" class="habilidades">
+      <h5>Habilidades</h5>
+      <div class="habilidades_container"></div>
+    </div>
+
+    <!-- Contacto -->
+    <div class="contacto">
+      <div class="contacto_contenedor">
+        <div class="contacto_contenedor_imagen">
+          <div class="imagen_contenedor">
+            <img src="Nueva carpeta/descarga (1).jpeg" alt="" />
+          </div>
+        </div>
+        <div class="contacto_contenedor_form">
+          <form action=""></form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <script src="main.js"></script>
+</html>
