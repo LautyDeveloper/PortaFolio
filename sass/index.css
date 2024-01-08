@@ -474,7 +474,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
 }
 .contacto h3 {
   color: #fff;
@@ -485,7 +485,7 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 70%;
-  height: 55%;
+  height: 70%;
 }
 .contacto_contenedor_imagen {
   width: 40%;
@@ -580,6 +580,46 @@ body {
 .contacto_contenedor_form .form_input label {
   color: #FF6666;
   font-size: 1.1rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #171717;
+  width: 100vw;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer_h5 {
+  color: #B30000;
+  font-size: 2.4rem;
+}
+.footer_p {
+  color: #6B0000;
+  font-size: 1.5rem;
+}
+.footer_iconos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 15%;
+}
+.footer_iconos a {
+  transition: 0.4s;
+}
+.footer_iconos a:hover {
+  transform: scale(1.15);
+}
+.footer_iconos i {
+  color: #6B0000;
+  font-size: 1.6rem;
+  transition: 0.4s;
+}
+.footer_iconos i:hover {
+  color: #ff0000;
 }
 
 /* Responsive */
