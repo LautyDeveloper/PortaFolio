@@ -676,6 +676,12 @@ body {
   }
   /*Sobre Mi*/
   /*Contacto*/
+  .contacto_contenedor_imagen {
+    display: none;
+  }
+  .contacto_contenedor_form {
+    width: 100%;
+  }
 }
 /*Animaciones*/
 @keyframes homeBgText {

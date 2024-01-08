@@ -606,6 +606,18 @@ $color-blanco: #fff;
 
     /*Sobre Mi*/
     /*Contacto*/
+    .contacto{
+        &_contenedor{
+            &_imagen{
+                display: none;
+            }
+            &_form{
+                width: 100%;
+
+            }
+
+        }
+    }
 }
 
 /*Animaciones*/
