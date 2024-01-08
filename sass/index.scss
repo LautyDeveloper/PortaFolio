@@ -430,9 +430,60 @@ $color-blanco: #fff;
 .contacto{
     background-color: $color-rojo-mas-oscuro;
     @include mixins.crear-flex(column, center, center);
+    width: 100vw;
+    height: 100vh;
 
+    h3{
+        color: $color-blanco;
+    }
     &_contenedor{
-        @include mixins.crear-flex(row, space-between, center)
+        @include mixins.crear-flex(row, space-between, center);
+        width: 70%;
+        height: 55%;
+        &_form{
+            @include mixins.crear-flex(column, center, center);
+            height: 100%;
+            width: 50%;
+            form{
+                @include mixins.crear-flex(column, space-evenly, center);
+                text-align: center;
+                height: 100%;
+                width: 100%;
+                color: white
+            }
+            .form_input{
+                @include mixins.crear-flex(column, space-between, center);
+                height: 18%;
+                width: 100%;
+                input{
+                    width: 90%;
+                    outline: none;
+                    background-color: $color-rojo-oscuro;
+                    border: 1px solid $color-blanco;
+                    padding: 10px 11px;
+                    border-radius: 10px;
+                    color: $color-blanco;
+                    
+                }
+                input[type=submit]{
+                    background-color: $color-rojo-bitter;
+                    color: black;
+                    font-weight: 700;
+                    font-size: 1.2rem;
+                    letter-spacing: 3px;
+                    padding: 8px 11px;
+                    text-transform: uppercase;
+                    border: 2px solid white;
+                }
+                input::placeholder{
+                    color: $color-blanco;
+                }
+                label{
+                    color: $color-rojo-bitter;
+                    font-size: 1.1rem;
+                }
+            }
+        }
     }
 }
 

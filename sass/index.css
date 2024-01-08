@@ -473,12 +473,74 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+.contacto h3 {
+  color: #fff;
 }
 .contacto_contenedor {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  width: 70%;
+  height: 55%;
+}
+.contacto_contenedor_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+}
+.contacto_contenedor_form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+.contacto_contenedor_form .form_input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 18%;
+  width: 100%;
+}
+.contacto_contenedor_form .form_input input {
+  width: 90%;
+  outline: none;
+  background-color: #6B0000;
+  border: 1px solid #fff;
+  padding: 10px 11px;
+  border-radius: 10px;
+  color: #fff;
+}
+.contacto_contenedor_form .form_input input[type=submit] {
+  background-color: #FF6666;
+  color: black;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+  padding: 8px 11px;
+  text-transform: uppercase;
+  border: 2px solid white;
+}
+.contacto_contenedor_form .form_input input::-moz-placeholder {
+  color: #fff;
+}
+.contacto_contenedor_form .form_input input::placeholder {
+  color: #fff;
+}
+.contacto_contenedor_form .form_input label {
+  color: #FF6666;
+  font-size: 1.1rem;
 }
 
 /* Responsive */
