@@ -556,6 +556,20 @@ $color-blanco: #fff;
 
 /* Responsive */
 @media screen and (max-width:767px){
+    /*Navbar*/
+    .navbar{
+        &-collapse{
+            @include mixins.crear-flex(column, space-around, center)
+        }
+        &-nav{
+            flex-direction: row;
+            width: 90%;
+            justify-content: space-evenly;
+            li{
+                margin: 2%;
+            }
+        }
+    }
     .hero{
         @include mixins.crear-flex(column-reverse, center, center);
         height: 100vh;
@@ -589,6 +603,9 @@ $color-blanco: #fff;
             padding-bottom: 10%;
         }
     }
+
+    /*Sobre Mi*/
+    /*Contacto*/
 }
 
 /*Animaciones*/
