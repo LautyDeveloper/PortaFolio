@@ -558,23 +558,35 @@ $color-blanco: #fff;
 @media screen and (max-width:767px){
     .hero{
         @include mixins.crear-flex(column-reverse, center, center);
-        height: auto;
+        height: 100vh;
         text-align: center;
         &_todo {
             width: 100%;
             margin: 0;
             @include mixins.crear-flex(column, center, center);
-
+            .hero_titulo{
+                h1{
+                    font-size: 2rem;
+                }
+                h3{
+                    font-size: 1.5rem;
+                }
+            }
+            .hero_parrafo{
+                font-size: 1.2rem;
+                width: 85%;
+            }
         }
 
         &_imagen{
-            width: 200px;
-            height: 200px;
-            margin: 0;
+            width: 230px;
+            height: 290px;
+            margin-top: 70px;
         }
 
         &_abajo{
             width: 90%;
+            padding-bottom: 10%;
         }
     }
 }

@@ -629,7 +629,7 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    height: auto;
+    height: 100vh;
     text-align: center;
   }
   .hero_todo {
@@ -640,13 +640,24 @@ body {
     align-items: center;
     justify-content: center;
   }
+  .hero_todo .hero_titulo h1 {
+    font-size: 2rem;
+  }
+  .hero_todo .hero_titulo h3 {
+    font-size: 1.5rem;
+  }
+  .hero_todo .hero_parrafo {
+    font-size: 1.2rem;
+    width: 85%;
+  }
   .hero_imagen {
-    width: 200px;
-    height: 200px;
-    margin: 0;
+    width: 230px;
+    height: 290px;
+    margin-top: 70px;
   }
   .hero_abajo {
     width: 90%;
+    padding-bottom: 10%;
   }
 }
 /*Animaciones*/
